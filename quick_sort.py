@@ -1,0 +1,47 @@
+def quick_sort(valores):
+    # Listas com zero ou um elemento já estão ordenadas.
+    if len(valores) <= 1:
+        return valores.copy()
+
+    # Escolhe o elemento do meio como pivô.
+    pivo = valores[len(valores) // 2]
+
+    menores = []
+    iguais = []
+    maiores = []
+
+    # Separa os valores menores, iguais e maiores que o pivô.
+    for valor in valores:
+        if valor < pivo:
+            menores.append(valor)
+            continue
+
+        if valor > pivo:
+            maiores.append(valor)
+            continue
+
+        iguais.append(valor)
+
+    # Ordena recursivamente as partes menores e maiores.
+    ordenados_menores = quick_sort(menores)
+    ordenados_maiores = quick_sort(maiores)
+
+    # Junta as partes sem alterar a lista original.
+    return ordenados_menores + iguais + ordenados_maiores
+
+
+# Executa um exemplo para verificar o resultado.
+print(quick_sort([7, 3, 9, 1, 5]))
+
+
+
+
+
+
+
+
+
+
+
+
+
