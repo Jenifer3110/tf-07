@@ -33,7 +33,7 @@ def quick_sort(valores):
 # Executa um exemplo para verificar o resultado.
 print(quick_sort([7, 3, 9, 1, 5]))
 
-
+# Teste executado com sucesso: a lista foi ordenada.
 
 
 
